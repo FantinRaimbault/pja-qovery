@@ -5,6 +5,7 @@ namespace App\Core\Database;
 
 use PDO;
 use Throwable;
+use App\Core\Logger;
 
 class Connection
 {
@@ -12,6 +13,7 @@ class Connection
 
     public static function getInstance()
     {
+        Logger::dd(getenv('MYSQL_DATABASE'));
         if (is_null(self::$instance)) {
             try {
                 $pdo = new PDO(

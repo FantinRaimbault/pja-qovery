@@ -13,7 +13,8 @@ RUN apt-get update && \
     apt-get install -y git && \
     apt install wget && \
     wget -O composer-setup.php https://getcomposer.org/installer && \
-    php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
+    composer install
 
 RUN pecl install yamL
 

@@ -8,7 +8,12 @@ COPY server/php.ini /usr/local/etc/php/
 # See https://github.com/docker-library/php/issues/62
 RUN docker-php-ext-install pdo pdo_mysql
 
-RUN apt-get update -y && apt-get install -y libpng-dev libfreetype6-dev libyaml-dev
+RUN apt-get update && \
+    apt-get install -y libpng-dev libfreetype6-dev libyaml-dev && \
+    apt-get install -y git && \
+    apt install wget && \
+    wget -O composer-setup.php https://getcomposer.org/installer && \
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 RUN pecl install yamL
 

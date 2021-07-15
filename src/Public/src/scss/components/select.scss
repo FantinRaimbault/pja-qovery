@@ -1,0 +1,159 @@
+@import "../variables";
+
+.bb-select-one {
+    *,
+    :after,
+    :before {
+        box-sizing: border-box;
+    }
+    display: block;
+    padding-bottom: 2px;
+    cursor: pointer;
+    min-width: 180px;
+
+    [type="button"] {
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $orange;
+        border-bottom: 2px solid $border-color;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+        line-height: 48px;
+        padding: 2px 0 1px 16px;
+        position: relative;
+        text-align: left;
+        text-shadow: none;
+        width: 100%;
+        z-index: 1;
+        outline: none;
+        overflow: hidden;
+
+        &:focus,
+        &:hover {
+            //   background: rgba(0,0,0,0.1);
+        }
+        &:after {
+            content: "\25be";
+            float: right;
+            padding-right: 16px;
+        }
+    }
+    ul[role="listbox"] {
+        cursor: default;
+        background-color: $light-purple;
+        border-radius: 4px;
+        list-style: none;
+        line-height: 26px;
+        overflow: hidden;
+        margin: 0;
+        max-height: 0;
+        position: absolute;
+        padding: 0;
+        transform: translateY(-50%);
+        transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+        box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%),
+            0px 1px 10px 0px rgb(0 0 0 / 12%);
+
+        a {
+            height: 48px;
+            margin: 0;
+            outline: none;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            &:hover {
+                background-color: $hover;
+            }
+        }
+    }
+
+    &.active ul {
+        max-height: 150px;
+        width: auto;
+        overflow: auto;
+        padding: 8px 0 16px 0px;
+        z-index: 2;
+        transition: all 0.2s ease;
+    }
+}
+
+.bb-select-two {
+    *,
+    :after,
+    :before {
+        box-sizing: border-box;
+    }
+    display: block;
+    padding-bottom: 2px;
+    cursor: pointer;
+    // min-width: 180px;
+
+    label:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    [type="button"] {
+        border: none;
+        // font-size: 1.2rem;
+        // font-weight: 600;
+        color: white;
+        // border-bottom: 2px solid $border-color;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        text-align: left;
+        text-shadow: none;
+        width: 100%;
+        z-index: 1;
+        outline: none;
+        overflow: hidden;
+
+        &:focus,
+        &:hover {
+            //   background: rgba(0,0,0,0.1);
+        }
+    }
+    ul[role="listbox"] {
+        cursor: default;
+        background-color: $light-purple;
+        border-radius: 4px;
+        list-style: none;
+        // line-height: 26px;
+        overflow: hidden;
+        margin: 0;
+        max-height: 0;
+        position: absolute;
+        padding: 0;
+        transform: translateY(-50%);
+        transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+        box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%),
+            0px 1px 10px 0px rgb(0 0 0 / 12%);
+
+        a {
+            height: 48px;
+            margin: 0;
+            outline: none;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            &:hover {
+                background-color: $hover;
+            }
+        }
+    }
+
+    &.active ul {
+        max-height: 150px;
+        width: auto;
+        overflow: auto;
+        z-index: 2;
+        transition: all 0.2s ease;
+    }
+}
+

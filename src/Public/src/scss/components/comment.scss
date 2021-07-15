@@ -1,0 +1,31 @@
+@import '../variables.scss';
+
+.comment {
+    background-color: $dark-purple;
+    border: 1px solid $blue;
+    border-radius: 4px;
+    .user {
+        max-width: 125px;
+        word-wrap: break-word;
+        .profile-picture {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+        .name {
+            color: $blue;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .created-at {
+            font-size: 14px;
+            font-style: italic;
+        }
+    }
+    .comment-content {
+        padding-left: 20px;
+    }
+    .right-content {
+
+    }
+}

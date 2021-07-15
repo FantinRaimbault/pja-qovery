@@ -1,0 +1,21 @@
+FROM php:7.4-apache
+
+# Install PDO MySQL driver
+# See https://github.com/docker-library/php/issues/62
+RUN apt-get update -y && apt-get install -y libzip-dev zip libpng-dev libfreetype6-dev libyaml-dev
+RUN docker-php-ext-install pdo pdo_mysql zip
+RUN pecl install yamL
+
+RUN usermod -u 1000 www-data
+
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+
+COPY ./server/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY ./server/apache2.conf /etc/apache2/apache2.conf
+COPY ./server/php.ini /usr/local/etc/php/php.ini
+
+COPY ./src /var/www/html
+COPY ./server/composer.json /var/www/html
+COPY ./server/phpunit.xml /var/www/html
+
+RUN composer require --dev phpunit/phpunit

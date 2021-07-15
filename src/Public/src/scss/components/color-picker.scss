@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+.color-picker-wrapper {
+    padding: 15px 0;
+    border: 1px solid $blue;
+    border-radius: 4px;
+    &:hover {
+        background-color: $hover;
+        cursor: pointer;
+    }
+}
+
+.color-picker {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+}

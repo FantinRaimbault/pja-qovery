@@ -1,0 +1,10 @@
+.DS_Store
+db_data
+.idea
+vendor/phpunit/.phpunit.result.cache
+vendor/
+src/error.log
+toto.php
+toto.js
+composer.lock
+src/Public/webpack/node_modules

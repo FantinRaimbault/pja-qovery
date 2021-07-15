@@ -1,0 +1,203 @@
+@import "../variables";
+
+$space: 15px;
+
+.modal {
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+
+    .form-modal {
+        width: 400px;
+        background-color: $light-purple;
+        display: flex;
+        flex-direction: column;
+        border-radius: 3px;
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1.5px solid $dark-purple;
+            padding: 5px 0 5px 0;
+
+            h2 {
+                margin-left: $space;
+            }
+
+            div {
+                margin-right: $space;
+                display: flex;
+                padding: 6px;
+                border-radius: 3px;
+                button {
+                    content: "";
+                    background-color: transparent;
+                    background-image: url("../images/cancel.svg");
+                    background-size: 100% 100%;
+                    border: 0;
+                    padding: 8px;
+                    color: white;
+                }
+                button:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            div:hover {
+                background-color: $hover;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: $space;
+
+            input[type="submit"] {
+                background-color: $blue;
+                width: 100%;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .yes-no-modal {
+        width: 400px;
+        background-color: $light-purple;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        padding: 5px;
+        h2 {
+            text-align: center;
+            margin: 20px 0 20px 0;
+        }
+
+        form {
+            display: flex;
+            padding: $space;
+
+            > * {
+                flex-basis: 100%;
+                margin: 5px;
+            }
+
+            input[type="button"] {
+                background-color: $grey;
+            }
+
+            input[type="submit"] {
+                background-color: $red;
+            }
+        }
+    }
+
+    .musics-modal {
+        width: 400px;
+        background-color: $light-purple;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        padding: 5px;
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1.5px solid $dark-purple;
+            padding: 5px 0 5px 0;
+
+            h2 {
+                margin-left: $space;
+            }
+
+            div {
+                margin-right: $space;
+                display: flex;
+                padding: 6px;
+                border-radius: 3px;
+                button {
+                    content: "";
+                    background-color: transparent;
+                    background-image: url("../images/cancel.svg");
+                    background-size: 100% 100%;
+                    border: 0;
+                    padding: 8px;
+                    color: white;
+                }
+                button:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            div:hover {
+                background-color: $hover;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: $space;
+            .musics {
+                max-height: 300px;
+                overflow: auto;
+                .music-raw {
+                    padding: 10px;
+                    display: flex;
+                    cursor: pointer;
+                    .music-picture {
+                        height: 60px;
+                        width: 60px;
+                        background-color: burlywood;
+                        border-radius: 4px;
+                    }
+                    .music-details {
+                        flex: 2;
+                        font-size: 12px;
+                        > p {
+                            margin-top: 4px !important;
+                            margin-left: 4px !important;
+                        }
+                    }
+                    .music-checkbox {
+                        display: flex;
+                        flex: 1;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                .music-raw:hover {
+                    background-color: $hover;
+                }
+            }
+            
+            .shortcode {
+                display: flex;
+                justify-content: center;
+                margin: 10px;
+                button {
+                    margin-left: 5px;
+                }
+            } 
+
+            .generate {
+                background-color: $blue;
+                border: none;
+                text-decoration: none;
+            }
+        }
+    }
+}

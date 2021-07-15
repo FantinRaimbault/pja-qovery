@@ -1,0 +1,29 @@
+@import "../variables.scss";
+
+.error-view {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .container {
+        padding: 20px;
+        background: $dark-purple;
+        display: flex;
+        min-width: 350px;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            .error-message {
+                margin-left: 50px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .back-app {
+            margin: 10px;
+            background: $dark-purple;
+        }
+    }
+}

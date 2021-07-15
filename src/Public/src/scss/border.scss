@@ -1,0 +1,17 @@
+.bb-border-bottom {
+    border-bottom: 2px solid $border-color;
+}
+
+.bb-border-right {
+    border-right: 2px solid $border-color;
+}
+
+.bb-border {
+    border: 2px solid $border-color;
+    border-radius: 4px;
+}
+
+.bb-border-selected {
+    border: 2px solid $yellow !important;
+    border-radius: 4px;
+}

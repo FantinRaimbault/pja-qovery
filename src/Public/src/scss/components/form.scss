@@ -1,0 +1,20 @@
+@import "../variables";
+
+.bb-form {
+    input[type="submit"] {
+        background-color: $blue;
+    }
+    img {
+        margin: 10px;
+    }
+    input,
+    textarea {
+        margin: 10px 0;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+        width: 100%;
+    }
+}

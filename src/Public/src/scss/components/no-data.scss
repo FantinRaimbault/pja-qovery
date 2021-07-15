@@ -1,0 +1,19 @@
+.no-data {
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .sad {
+        background-image: url("../images/no-data.svg");
+        background-color: transparent;
+        background-size: 100% 100%;
+        border: 0;
+        height: 30px;
+        width: 30px;
+    }
+    .text {
+        margin-top: 20px;
+    }
+}

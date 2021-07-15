@@ -1,0 +1,20 @@
+@import "../variables";
+
+.sidebar {
+    width: 200px;
+    min-width: 200px;
+    height: 100%;
+    background-color: $dark-purple;
+}
+
+.sidebar-content {
+    border-top: 2px solid $border-color;
+    border-bottom: 2px solid $border-color;
+    > a {
+        padding: 20px 12px 20px 12px;
+    }
+    > a:hover {
+        background-color: rgba(198, 198, 198, 0.056);
+        color: $orange;
+    }
+}

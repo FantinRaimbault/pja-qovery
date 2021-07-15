@@ -1,0 +1,29 @@
+@import "../variables";
+
+.alert {
+    display: flex;
+    flex-direction: column;
+    min-height: 51px;
+    width: 100%;
+    border-radius: 4px;
+    justify-content: center;
+    li::before {
+        content: "- " !important;
+    }
+    &--danger {
+        background-color: #ffa5ac;
+        border: 2px solid rgb(255, 80, 94);
+        > * {
+            color: #71161e;
+            margin-left: 26px;
+        }
+    }
+    &--success {
+        background-color: $green;
+        border: 2px solid green;
+        > * {
+            margin-left: 26px;
+            color: #155724;
+        }
+    }
+}

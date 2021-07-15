@@ -1,0 +1,16 @@
+@import '../variables.scss';
+
+.bb-header {
+    background: $dark-purple;
+    padding:8px 26px;
+    margin-bottom: 30px;
+    box-shadow: 0px 6px 18px rgb(0 0 0 / 12%);
+    border-radius: 4px;
+}
+
+.bb-header-sitemap {
+    background: $dark-purple;
+    padding:8px 26px;
+    box-shadow: 0px 6px 18px rgb(0 0 0 / 12%);
+    border-radius: 4px;
+}

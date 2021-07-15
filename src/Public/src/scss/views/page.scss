@@ -1,0 +1,185 @@
+@import "../variables.scss";
+
+$sideBarWidth: 250px;
+
+.edit-nav {
+    display: flex;
+    background-color: $dark-purple;
+    height: $nav-bar-edit-page;
+    border-bottom: 2px solid $border-color;
+    .left-options {
+        > * {
+            display: flex;
+            align-items: center;
+            border-right: 2px solid $border-color;
+            padding: 0 12px 0 12px;
+        }
+        #selected-page {
+            flex-basis: 160px;
+            button::before {
+                content: "Page: ";
+            }
+        }
+        .eye {
+            div {
+                cursor: pointer;
+                padding: 6px;
+                border-radius: 3px;
+                p {
+                    content: "";
+                    background-color: transparent;
+                    background-image: url("../images/eye.svg");
+                    background-size: 100% 100%;
+                    border: 0;
+                    padding: 8px;
+                    color: white;
+                }
+            }
+            div:hover {
+                background-color: $hover;
+            }
+        }
+
+        .stretch {
+            div {
+                cursor: pointer;
+                padding: 6px;
+                border-radius: 3px;
+                p {
+                    content: "";
+                    background-color: transparent;
+                    background-image: url("../images/stretch.svg");
+                    background-size: 100% 100%;
+                    border: 0;
+                    padding: 8px;
+                    color: white;
+                    transform: rotate(-90deg);
+                }
+            }
+            div:hover {
+                background-color: $hover;
+            }
+        }
+    }
+
+    .right-options {
+        justify-content: flex-end;
+        > * {
+            display: flex;
+            align-items: center;
+            border-right: 2px solid $border-color;
+            padding: 0 12px 0 12px;
+        }
+        #publish {
+            flex-basis: 200px;
+        }
+    }
+}
+
+.page-edition {
+    .sidebar-edit-page {
+        flex: 0 0 $sideBarWidth;
+        background-color: $dark-purple;
+    }
+    div[role="application"] {
+        flex: 1;
+    }
+    #left-sidebar {
+        .options {
+            height: 100%;
+            border-right: 2px solid $border-color;
+            > * {
+                display: flex;
+                align-items: center;
+                padding: 0 12px 0 12px;
+                height: 52px;
+            }
+            .icon {
+                div {
+                    cursor: pointer;
+                    padding: 6px;
+                    border-radius: 3px;
+                    p {
+                        background-color: transparent;
+                        background-size: 100% 100%;
+                        border: 0;
+                        height: 19px;
+                        width: 19px;
+                    }
+                }
+                div:hover {
+                    background-color: $hover;
+                }
+            }
+            .menu {
+                background-image: url("../images/menu.svg");
+            }
+            .block {
+                background-image: url("../images/block.svg");
+            }
+            .music {
+                background-image: url("../images/music-note.svg");
+            }
+            .media {
+                background-image: url("../images/media.svg");
+            }
+            .day-and-night {
+                background-image: url("../images/day-and-night.svg");
+            }
+        }
+        .content-options {
+            height: 100%;
+            flex: 1;
+        }
+    }
+
+    #right-sidebar {
+        #right-tabs {
+            padding: 20px;
+        }
+        .tab {
+            padding: 15px 0;
+            &:hover {
+                background-color: $hover;
+                cursor: pointer;
+            }
+        }
+        .settings {
+            background-image: url("../images/settings.svg");
+            background-color: transparent;
+            background-size: 100% 100%;
+            border: 0;
+            height: 19px;
+            width: 19px;
+        }
+        .templates {
+            background-image: url("../images/templates.svg");
+            background-color: transparent;
+            background-size: 100% 100%;
+            border: 0;
+            height: 19px;
+            width: 19px;
+        }
+        .seo {
+            background-image: url("../images/seo.svg");
+            background-color: transparent;
+            background-size: 100% 100%;
+            border: 0;
+            height: 19px;
+            width: 19px;
+        }
+        .template-box {
+            width: 140px;
+            min-height: 150px;
+            border-radius: 4px;
+            border: 1px solid $blue;
+            button {
+                padding: 4px;
+                margin: 4px 0;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}

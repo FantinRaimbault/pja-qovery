@@ -7,12 +7,12 @@ use App\Modules\Module;
 use App\Modules\BinksBeatHelper;
 use App\Modules\BinksBeatMailer;
 use App\Modules\Middlewares\Authorize;
-use App\Modules\Controllers\Auth\Middlewares\IsAlreadyConnected;
 use App\Modules\Controllers\Auth\Models\User;
 use App\Modules\Controllers\Auth\Models\Credential;
 use App\Modules\Controllers\Auth\Utils\AuthHelpers;
 use App\Modules\Controllers\Auth\Models\Verification;
 use App\Modules\Controllers\Auth\UseCases\AuthUseCases;
+use App\Modules\Controllers\Auth\Middlewares\IsAlreadyConnected;
 
 
 class AuthModule extends Module

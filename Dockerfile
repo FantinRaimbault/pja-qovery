@@ -1,5 +1,9 @@
 FROM php:8.0-apache
 
+COPY src /var/www/html/
+COPY server/000-default.conf /etc/apache2/sites-available/
+COPY server/apache2.conf /etc/apache2/
+COPY server/php.ini /usr/local/etc/php/
 # Install PDO MySQL driver
 # See https://github.com/docker-library/php/issues/62
 RUN docker-php-ext-install pdo pdo_mysql
@@ -18,11 +22,6 @@ RUN usermod -u 1000 www-data
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
-
-COPY src var/www/html/
-COPY server/000-default.conf /etc/apache2/sites-available/
-COPY server/apache2.conf /etc/apache2/
-COPY server/php.ini /usr/local/etc/php/
 
 # Enable yaml
 #RUN a2enmod yaml

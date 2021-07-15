@@ -4,7 +4,7 @@ COPY src /var/www/html/
 COPY server/000-default.conf /etc/apache2/sites-available/
 COPY server/apache2.conf /etc/apache2/
 COPY server/php.ini /usr/local/etc/php/
-# Install PDO MySQL driver
+# Install PDO MySQL driverr
 # See https://github.com/docker-library/php/issues/62
 RUN docker-php-ext-install pdo pdo_mysql
 

@@ -2,7 +2,6 @@
 
 namespace App\Modules\Middlewares;
 
-use App\Core\Logger;
 use App\Core\Router\Middleware;
 
 class IsEntityFound extends Middleware

@@ -1,0 +1,11 @@
+version: "3"
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: binks-beat-phpmyadmin-prod
+    ports:
+      - 8888:80
+    environment:
+      - PMA_HOST=z2f3cbc6f-mysql.qovery.io
+      - PMA_USER=root
+      - PMA_PASSWORD=6hgD3b24vtFrRGax

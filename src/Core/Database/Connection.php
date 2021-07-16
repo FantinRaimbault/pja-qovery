@@ -13,10 +13,6 @@ class Connection
 
     public static function getInstance()
     {
-        Logger::dd([
-            "hello",
-            getenv('MYSQL_DATABASE'),
-        ]);
         if (is_null(self::$instance)) {
             try {
                 $pdo = new PDO(
